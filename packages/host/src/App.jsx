@@ -5,11 +5,11 @@ import "./App.css";
 
 import Button from "remoteApp/Button";
 
-//import { useSharedState } from "remoteApp/MyProvider";
+import { useSharedState } from "remoteApp/MyProvider";
 
 function App() {
-  const [count, setCount] = useState(0);
-  //const [count, setCount] = useSharedState(0);
+  //const [count, setCount] = useState(0);
+  const { count, increment } = useSharedState();
 
   return (
     <>
@@ -21,12 +21,12 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <button onClick={() => {}}></button>
+      <button onClick={increment}> Count :: {count}</button>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        {/* <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </button> */}
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
