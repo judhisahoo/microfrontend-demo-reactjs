@@ -5,8 +5,11 @@ import "./App.css";
 
 import Button from "remoteApp/Button";
 
+//import { useSharedState } from "remoteApp/MyProvider";
+
 function App() {
   const [count, setCount] = useState(0);
+  //const [count, setCount] = useSharedState(0);
 
   return (
     <>
@@ -18,6 +21,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      <button onClick={() => {}}></button>
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
